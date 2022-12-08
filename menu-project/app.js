@@ -122,7 +122,9 @@ const menu = [
         const categoryBtns=categories.map(function(category){
             return `<button class='filter-btn' type="button" data-id=${category}>${category}</button>`;
         }).join("");
+
         container.innerHTML=categoryBtns;
+        
         const filterBtns=container.querySelectorAll('.filter-btn');
         filterBtns.forEach(function(btn){
             btn.addEventListener('click',function(e){

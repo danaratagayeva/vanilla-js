@@ -17,8 +17,11 @@ navToggle.addEventListener('click',function(){
         linksContainer.style.height=0;
     }
 })
+
+
 const navbar=document.getElementById('nav');
 const topLink=document.querySelector('.top-link');
+
 window.addEventListener('scroll',function(){
 const scrollHeight=window.pageYOffset;
 const navHeight=navbar.getBoundingClientRect().height;
@@ -34,3 +37,16 @@ if(scrollHeight>500){
     topLink.classList.remove('show-link')
 }
 })
+
+
+const scrollLinks=document.querySelectorAll('.scroll-link');
+
+scrollLinks.forEach(function(link)) {
+    link.addEventListener('click', function(e){
+    e.preventDefault();
+        const id = e.currentTarget.getAttribute('href').slice(1);
+        const element=document.getElementById(id);
+        let position=element.offsetTop;
+        
+    })
+}

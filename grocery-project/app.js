@@ -46,8 +46,6 @@ function addItem(e){
             //set back to default
             setBackToDefault()
 
-
-
     }else if(value && editFlag){
         console.log("editing")
     }
@@ -59,9 +57,6 @@ function addItem(e){
 function displayAlert(text,action){
     alert.textContent=text;
     alert.classList.add(`alert-${(action)}`);
-
-    //set back to default
-    function setBackTo De
 
     //remove alert
     setTimeout(function(){

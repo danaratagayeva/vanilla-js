@@ -41,6 +41,12 @@ function addItem(e){
             displayAlert('item added to the list','success')
             //show container
             container.classList.add('show-container')
+            //add to local storage
+            addToLocalStorage(id,value);
+            //set back to default
+            setBackToDefault()
+
+
 
     }else if(value && editFlag){
         console.log("editing")
@@ -54,10 +60,22 @@ function displayAlert(text,action){
     alert.textContent=text;
     alert.classList.add(`alert-${(action)}`);
 
+    //set back to default
+    function setBackTo De
+
     //remove alert
     setTimeout(function(){
         alert.textContent='';
         alert.classList.remove(`alert-${(action)}`);       
     },1000)
 }
+
+    //set back to default
+    function setBackToDefault(){
+        console.log('set back to default')
+    }
+
+    function addToLocalStorage(id,value){
+        console.log('added to local storage');
+    }
 

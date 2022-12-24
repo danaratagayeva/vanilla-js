@@ -12,6 +12,8 @@ let editId="";
 
 form.addEventListener('submit', addItem);
 
+clearBtn.addEventListener('click', clearItems);
+
 function addItem(e){
     e.preventDefault();
     const value=grocery.value;
@@ -64,6 +66,19 @@ function displayAlert(text,action){
         alert.classList.remove(`alert-${(action)}`);       
     },1000)
 }
+
+    function clearItems(){
+        const items=document.querySelectorAll('.grocery-item');
+
+        if(items.length>0){
+            items.forEach(function(item){
+                list.removeChild(item);
+
+            })
+        }
+        container.classList.remove('show-container');
+        displayAlert('empty list', 'danger')
+    }
 
     //set back to default
     function setBackToDefault(){
